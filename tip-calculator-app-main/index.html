@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="myform">
+  
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+
+    <div class="mb-5">
+      <h6 style="font-weight: 700; letter-spacing: 5px;">SPLI</h6>
+      <h6 style="font-weight: 700; letter-spacing: 5px">TTER</h6>
+    </div>
+
+
+    <div class="card" style="border-radius: 20px;">
+      <div class="card-body">
+
+
+        <div class="row">
+          <div class="col-md-6">
+
+            <p class="para">Bill</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control text-end " id="bill" placeholder="$" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+
+            <p>Select Tip %</p>
+
+            <div class="my_button">
+              <div class="row mb-3">
+
+                <div class="col-md-4 col-5">
+                  <button id='5' name="5" value="5" onclick="read_val(this.id)" class=" border bg-light">5%</button>
+                </div>
+
+                <div class="col-md-4 col-5">
+                  <button id='10' name="10" value="10" onclick="read_val(this.id)" class="border bg-light">10%</button>
+                </div>
+
+                <div class="col-md-4 col-5">
+                  <button id='15' name="15" value="15" onclick="read_val(this.id)" class="border bg-light">15%</button>
+                </div>
+
+
+                <div class="col-md-4 col-5">
+                  <button id='25' name="25" value="25" onclick="read_val(this.id)" class="border bg-light">25%</button>
+                </div>
+
+                <div class="col-md-4 col-5">
+                  <button id='50' name="50" value="50" onclick="read_val(this.id)" class="border bg-light">50%</button>
+                </div>
+
+                <div class="col-md-4 col-5">
+                  <input type="text" placeholder="Custom" class="btn" id="my_custom">
+                </div>
+
+              </div>
+            </div>
+
+            <p class="para">Number of people</p>
+            
+            <span id="error"></span>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control text-end people" aria-label="Username" id="people"
+                aria-describedby="basic-addon1">
+                <br>
+            </div>
+
+
+
+          </div>
+
+          <div class="col-md-6 text-white">
+
+            <div class="card" style="border-radius: 20px; background:hsl(183, 100%, 15%)">
+              <div class="card-body">
+                
+                <div class="row p-2">
+                  
+                  <div class="col-6">
+
+                    <p>Tip Amount <br> <span style="font-size: 10px; color: hsl(172, 67%, 45%)">/ person</span> </p>
+                  </div>
+
+                  <div class="col-6">
+
+                    <h3 id="tip_per_person"  style="color: hsl(172, 42%, 47%); font-weight:900">$0.00</h3>
+
+                  </div>
+
+
+                </div>
+
+                <div class="row p-2 mb-5">
+                  
+                  <div class="col-6">
+
+                    <p>Total <br> <span style="font-size: 10px; color: hsl(172, 67%, 45%)">/ person</span> </p>
+                  </div>
+
+                  <div class="col-6">
+
+                    <h3 id="total_tip"  style="color: hsl(172, 42%, 47%); font-weight:900">$0.00</h3>
+
+                  </div>
+
+
+                </div>
+
+
+
+                <button id="reset" class=" mt-5 p-1" style="width: 100%; font-weight:900; border-radius:5px; text-transform: uppercase; background:hsl(172, 42%, 47%);" onclick="check_for_error()" >Reset</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Kshitij Kumar Sharma</a>.
+</div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+
+  <script src="app.js"></script>
+</body>
+
+
+</html>
+
